@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import { ref, reactive, onMounted } from 'vue';
-
 </script>
 
 <template>
@@ -9,11 +8,20 @@ import { ref, reactive, onMounted } from 'vue';
       <div class="logo">LOGO</div>
       <div class="items">
         <ul>
-          <li>HOME</li>
-          <li>ABOUT</li>
+          <li>
+            <span>
+              <a href="#">HOME</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#">ABOUT</a>
+            </span>
+          </li>
         </ul>
       </div>
     </div>
+    <div class="introduce"></div>
   </div>
 </template>
 
@@ -24,20 +32,47 @@ import { ref, reactive, onMounted } from 'vue';
   min-width: var(--minWidth);
   background-color: #346c9c;
   .nav {
-    width: 80vw;
+    width: 85vw;
     min-width: var(--minWidth);
     height: 150px;
-    line-height: 150px;
-    color: #fff;
+    color: var(--color);
     margin: 0 auto;
-
     display: flex;
     justify-content: space-between;
+    align-items: center;
+
+    .logo {
+      width: 162px;
+      height: 100px;
+      line-height: 100px;
+      font-size: var(--midFontSize);
+    }
     .items {
+      height: 100px;
+      line-height: 100px;
       ul {
         display: flex;
+        li {
+          span {
+            display: inline-block;
+            width: 120px;
+            height: 60px;
+            text-align: right;
+            a {
+              color: var(--color);
+              font-size: var(--midFontSize);
+            }
+          }
+        }
       }
     }
+  }
+  .introduce {
+    width: 85vw;
+    min-width: 1024px;
+    margin: 0 auto;
+    height: calc(100% - 250px);
+    border: 1px solid #fff;
   }
 }
 </style>

@@ -1,3 +1,6 @@
 body {
-    --minWidth: 1024px
+    --minWidth: 1024px;
+    --maxFontSize: 32px;
+    --midFontSize: 24px;
+    --color: #fff;
 }

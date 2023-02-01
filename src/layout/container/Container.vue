@@ -3,11 +3,16 @@ import { ref, reactive } from 'vue';
 </script>
 
 <template>
-  <div>
-    <div style="height: 40px; border-bottom: 1px solid #ccc;" v-for="item in 100" :key="item">
-        {{ item }}
-    </div>
+  <div class="container">
   </div>
 </template>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+  .container {
+    width: 85vw;
+    min-width: 1024px;
+    height: 1024px;
+    margin: 100px auto;
+    border: 1px solid black;
+  }
+</style>
