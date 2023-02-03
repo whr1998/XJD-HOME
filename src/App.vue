@@ -310,6 +310,6 @@ html,
 body,
 #app {
   height: 100%;
-  background-color: rgb(245, 245, 245);
+  background-color: rgb(244, 244, 244);
 }
 </style>

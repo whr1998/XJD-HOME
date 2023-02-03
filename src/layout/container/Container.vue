@@ -22,14 +22,39 @@ const info = reactive([
     baike: '',
   },
 ]);
+const intros = reactive([
+  {
+    img: '../../../public/introduce/1.jpg',
+    name: 'ESTELLE',
+  },
+  {
+    img: '../../../public/introduce/2.png',
+    name: 'ISHIHARA SATOMI',
+  },
+  {
+    img: '../../../public/introduce/3.png',
+    name: 'SONGYI',
+  },
+  {
+    img: '../../../public/introduce/4.png',
+    name: 'KIMCHAEHYUN',
+  },
+]);
 </script>
 
 <template>
   <article>
+    <div class="banner">
+      <el-carousel height="600px">
+        <el-carousel-item v-for="item in intros" :key="item">
+          <img :src="item.img" :alt="item.name" />
+        </el-carousel-item>
+      </el-carousel>
+    </div>
     <div class="container">
       <div class="infos">
         <div class="items" v-for="item in info">
-          <img :src="item.img" alt="" />
+          <!-- <img :src="item.img" alt="" /> -->
         </div>
       </div>
     </div>
@@ -37,6 +62,16 @@ const info = reactive([
 </template>
 
 <style lang="scss" scoped>
+.banner {
+  width: 85vw;
+  min-width: 1024px;
+  margin: 0 auto;
+  img {
+    width: 85vw;
+    min-width: 1024px;
+    object-fit: cover;
+  }
+}
 .container {
   width: 85vw;
   min-width: var(--minWidth);
@@ -55,5 +90,15 @@ const info = reactive([
       }
     }
   }
+}
+</style>
+
+<style lang="scss" scoped>
+.el-carousel__item:nth-child(2n) {
+  background-color: #99a9bf;
+}
+
+.el-carousel__item:nth-child(2n + 1) {
+  background-color: #d3dce6;
 }
 </style>

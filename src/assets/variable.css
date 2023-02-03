@@ -1,6 +1,9 @@
 body {
     --minWidth: 1024px;
-    --maxFontSize: 32px;
+    --maxFontSize: 28px;
     --midFontSize: 24px;
-    --color: #346c9c;
+    --minFontSize: 20px;
+    --color-b: #346c9c;
+    --color-w: #fff;
+    --backgroundColor: #346c9c; 
 }
