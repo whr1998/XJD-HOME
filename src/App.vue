@@ -311,5 +311,6 @@ body,
 #app {
   height: 100%;
   background-color: rgb(244, 244, 244);
+  caret-color: transparent;
 }
 </style>
