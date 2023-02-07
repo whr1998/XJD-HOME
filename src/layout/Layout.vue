@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import { ref, reactive } from 'vue';
 import Container from './container/Container.vue';
 import Header from './header/Header.vue';
+import Footer from './footer/Footer.vue'
 </script>
 
 <template>
@@ -12,11 +12,11 @@ import Header from './header/Header.vue';
     <div class="container">
       <Container></Container>
     </div>
+    <div class="container">
+      <Footer></Footer>
+    </div>
   </div>
 </template>
 
 <style lang="scss" scoped>
-.layout {
-
-}
 </style>
